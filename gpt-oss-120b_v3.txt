@@ -1,0 +1,245 @@
+We need to produce JSON array of classification_results for each topic across all groups? The schema: each result includes sdg_context (which appears per group) and topic_id etc.
+
+We must assign a single most appropriate SDG target code from reference framework (targets across SDG-09,11,12,03). Also apply rules.
+
+We need to process each topic. Many topics under each SDG context. But the sdg_context field is given as the grouping, but could be the context of the dataset; classification may assign different target possibly cross_sdg_flag.
+
+We must output classification_results for each topic across all groups.
+
+Let's go through each.
+
+First, define target keywords.
+
+SDG-09 targets and keywords:
+
+9.1: infrastructure, reliable, resilient, regional, transborder, affordable access
+9.2: industrialization, industry employment, GDP
+9.3: small-scale enterprises, financial services, credit, value chains
+9.4: upgrade infrastructure, retrofit, sustainable, resource-use efficiency, clean technologies
+9.5: scientific research, technological capabilities, innovation, R&D
+9.a: sustainable infrastructure development in developing countries, financial support
+9.b: domestic technology development, policy environment, industrial diversification
+9.c: access to ICT, universal affordable internet
+
+SDG-11 targets keywords:
+
+11.1: housing, safe, affordable, basic services, slums
+11.2: transport, safe, affordable, sustainable transport
+11.3: inclusive sustainable urbanization, participatory planning
+11.a: links between urban, peri-urban, rural, development planning
+11.b: integrated policies for inclusion, resource efficiency, climate mitigation/adaptation
+
+SDG-12 targets keywords:
+
+12.1: 10-year framework, sustainable consumption and production
+12.2: sustainable management and efficient use of natural resources
+12.3: halve food waste, reduce food losses
+12.4: environmentally sound management of chemicals/waste, reduce releases
+12.5: reduce waste generation, prevention, reduction, recycling, reuse
+12.b: tools to monitor sustainable development impacts for tourism
+
+SDG-03 targets keywords:
+
+3.1: maternal mortality
+3.2: newborn/children under 5 mortality
+3.4: non-communicable diseases mortality, prevention treatment
+3.8: universal health coverage
+3.9: deaths from hazardous chemicals/pollution
+
+Now process topics.
+
+We must evaluate each topic's terms to match.
+
+We'll output JSON list.
+
+We'll also compute confidence 0-1.
+
+We need to follow hierarchy: explicit keyword match strongest.
+
+If ambiguous >0.6 both, add alternative.
+
+If not related (<0.4 confidence) or >60% terms belong to different SDG domain, assign not_related.
+
+Also cross_sdg_flag if aligns with different SDG than sdg_context.
+
+Let's process.
+
+SDG-09 group topics:
+topic_0: terms ["model","digital","system","performance","prediction","accuracy","learning","detection","results"]
+These are generic ML/digital modeling; no explicit industry, infrastructure, etc. Could relate to 9.5 (innovation, R&D) as it's about model development. Terms like "learning","prediction","model" align with scientific research and innovation (9.5). Confidence moderate maybe 0.55. No other target better. Since we are inside SDG-09 context, this is appropriate. So primary_target 9.5 with confidence 0.56. Not cross flag. Alternative none.
+
+topic_1: terms include healthcare etc. This aligns with SDG-03 health, not SDG-09. Rule: need to output primary_target? Since terms align with other SDG, we may output "not_related" for SDG-09 classification (because not within scope) but also cross_sdg_flag true and suggested_sdg "SDG-03". According to rule 2: Output not_related if >=60% terms belong to a different SDG domain. Here all terms healthcare => different domain. So primary_target "not_related", confidence maybe 0.9 (confidence of not related). cross_sdg_flag true, suggested_sdg "SDG-03". Provide reasoning.
+
+topic_2: terms ["digital","model","method","system","process","technology","intelligent","physical","control"]
+These align with 9.4 (upgrade infrastructure, smart, technology) or 9.5 (innovation). Also "physical" maybe "digital twin". Could be 9.4 (sustainable infrastructure). Terms like "control","process","technology". I think 9.4 more specific for infrastructure upgrade, resource efficiency. But also 9.5. Which stronger? No explicit "infrastructure". but "physical" and "control" maybe. I'd assign 9.5 (innovation) with confidence 0.6. Not cross.
+
+topic_3: terms include digital, industry, research, technologies, technology, analysis, review, literature, challenges. "digital industry" suggests 9.5 (innovation) or 9.2 (industry). "industry" is explicit for 9.2. So primary 9.2. Confidence high 0.85.
+
+topic_4: terms ["digital","framework","systems","real-time","challenges","integration","technology","monitoring","management"]
+Could relate to 9.1 (infrastructure reliable), 9.4 (upgrade infrastructure), 9.5 (innovation). Not explicit. Maybe 9.1 infrastructure; "framework", "systems", "monitoring" align. Confidence 0.6. Choose 9.1.
+
+topic_5: terms ["network","networks","security","resource","service","cloud","computing","allocation","services"]
+This aligns with 9.c (access to ICT). Yes network, cloud computing talk about ICT infrastructure. So 9.c confidence 0.78.
+
+topic_6: terms ["urban","cities","smart","planning","water","management","infrastructure","digital","transportation"]
+This is about smart cities. Could map to SDG-11 target 11.3 (urban planning) or 11.2 transport. But this is within SDG-09 context but cross SDG. According to rule, if align with different SDG, we should set best match and cross flag true. The terms "urban", "cities", "smart planning", "infrastructure", "transportation" align with 11.3 (inclusive urbanization) and 11.2 transport. I think 11.3 more appropriate. So primary_target maybe "11.3". But we need to output primary_target as code (e.g., "11.3") even though sdg_context is SDG-09. cross_sdg_flag true, suggested_sdg "SDG-11". Confidence maybe 0.75. Since target belongs to different SDG, we follow rule 4. Provide alternative? could also 11.2. But both >0.6, choose higher (maybe 11.3). Add alternative 11.2.
+
+topic_7: terms ["manufacturing","production","system","smart","process","systems","industry","simulation","product"]
+Matches 9.2 (industrialization) clear. Confidence 0.9.
+
+topic_8: terms ["digital","twins","systems","physical","models","system","development","design","which"]
+Digital twins align with 9.5 (innovation) 9.4 (infrastructure). But not specific. Could be 9.5 research. Confidence 0.6.
+
+topic_9: terms ["energy","power","consumption","carbon","waste","operation","plant","emissions","electric"]
+This aligns with 9.4 (resource efficiency, clean technologies) or 12.2 (resource use). Since in SDG-09 group, choose 9.4. Confidence 0.8.
+
+topic_10: terms ["virtual","system","robot","human","robotic","reality","robots","control","environment"]
+Robotics maybe 9.5 (innovation) or 9.2 industrial. Let's assign 9.5 (innovation). Confidence 0.65.
+
+topic_11: terms ["process","manufacturing","quality","additive","machining","material","parts","machine","parameters"]
+Manufacturing process improvement can align with 9.4 (upgrade infrastructure) and 9.2 (industry). Also 12.5 waste reduction? But 9.2 is about increasing industry's share, not process quality. 9.4 about sustainable industrial processes. So choose 9.4. Confidence 0.7.
+
+topic_12: terms ["agriculture","agricultural","farming","maritime","twins","fruit","product","forest","marine"]
+This is agricultural twins; aligns with SDG-12 resource management (12.2) or 2? Not in scope, but within SDG-09 group not related. Choose not_related, cross flag true, suggested_sdg "SDG-12". Confidence 0.85.
+
+topic_13: terms ["construction","building","information","management","model","safety","buildings","maintenance","project"]
+Construction management aligns with SDG-11 11.1 housing, 11.3 urban planning, also 9.4 infrastructure. Could be 11.1 (safe housing). but also 9.4 (infrastructure upgrade). Choose 11.1 maybe more about building safety. Since cross SDG: primary_target "11.1". cross true, suggested_sdg "SDG-11". Confidence 0.7.
+
+SDG-11 group topics:
+Now each topic; we assign primary target possibly within SDG-11 but could cross.
+
+topic_0: terms ["energy","building","buildings","thermal","consumption","carbon","emissions","model","digital"]
+This deals with building energy, aligns with 11.1 (housing, safe, efficient) or maybe 11.2 transport not. Could also be 12.2 resource efficiency. But building energy is about sustainable cities—target 11.3 maybe? Actually 11.3 is inclusive urbanization; 11.1 includes safe, affordable housing. Energy efficiency likely part of sustainable cities but not specific target. Could map to 11.3? No. I think best is 11.1 (housing), but the terms focus on energy consumption. Might be 12.2 though. Since we prefer same SDG context, choose 11.1. Confidence 0.6.
+
+topic_1: terms ["system","control","digital","simulation","model","design","which","systems","controller"]
+Generic, could align with 9.5 (innovation) but within SDG-11 maybe 11.3 planning (digital simulation for planning). Choose 11.3 with confidence 0.55.
+
+topic_2: terms ["model","digital","models","method","prediction","accuracy","learning","results","real-time"]
+Generic ML; could align with 9.5 innovation. Not specific to city. So maybe not_related within SDG-11, cross flag true suggested SDG-09 target 9.5. Confidence 0.8 for not_related.
+
+topic_3: terms ["metaverse","virtual","design","transport","reality","social","users","semantic","experience"]
+"transport" suggests 11.2 (sustainable transport). The rest about virtual design. Choose 11.2. Confidence 0.65.
+
+topic_4: terms ["urban","cities","planning","water","resilience","areas","disaster","community","sustainable"]
+Strongly aligns with 11.3 (inclusive sustainable urbanization) and 11.b (resource efficiency, climate adaptation). Since includes disaster resilience, climate adaptation => 11.b. Confidence 0.78.
+
+topic_5: terms ["digital","computing","network","problem","networks","offloading","resource","algorithm","optimization"]
+Technology network, likely 9.c (ICT) but within SDG-11 maybe not. So not_related, cross flag true suggested SDG-09 target 9.c. Confidence 0.75.
+
+topic_6: terms ["security","attacks","blockchain","against","layer","control","secure","nuclear","resilient"]
+Cybersecurity of nuclear, not specific to city. Not_related, cross flag maybe SDG-09 9.5? But could be 9.1 infrastructure resilience. choose cross to SDG-09 target 9.1 (resilient infrastructure). Since within SDG-11 we should still output primary target maybe 9.1 with cross flag true. Confidence 0.6.
+
+topic_7: terms ["structural","model","damage","bridge","digital","structure","monitoring","structures","analysis"]
+Bridge monitoring aligns with 11.1 (safe buildings) or 11.3 urban planning. Choose 11.1 (safe housing/infrastructure). Confidence 0.7.
+
+topic_8: terms ["traffic","vehicle","vehicles","driving","autonomous","control","system","transportation","safety"]
+Aligns with 11.2 (safe, sustainable transport). Confidence 0.85.
+
+topic_9: terms ["digital","management","smart","systems","research","system","framework","technology","twins"]
+Smart systems for city management align with 11.3 or 11.b. I'd pick 11.3 (integrated planning). Confidence 0.65.
+
+topic_10: terms ["human","logistics","content","graph","video","recognition","streaming","spatial-temporal","users"]
+Seems about digital logistics, maybe not city; not_related cross to SDG-09 maybe 9.c. Choose not_related with cross flag.
+
+topic_11: terms ["circular","construction","economy","waste","product","sustainable","industry","supply","manufacturing"]
+Circular construction aligns with 11.1 (buildings) and 12.5 waste reduction. Since SDG-11 context, choose 11.1? But it's about circular economy in construction = sustainable buildings = 11.1. Confidence 0.7.
+
+topic_12: terms ["point","method","construction","image","tunnel","images","cloud","scene","registration"]
+Construction imaging maybe 11.1 building safety. Choose 11.1. Confidence 0.6.
+
+topic_13: terms ["battery","batteries","electric","charging","lithium-ion","process","degradation","estimation","capacity"]
+Energy storage not city specific; maybe 12.5 waste (batteries) or 9.c ICT. Might be not_related with cross to SDG-12 12.5. Choose not_related, cross flag true suggested_sdG "SDG-12". Confidence 0.8.
+
+SDG-12 group topics:
+topic_0: terms ["digital","model","system","method","process","manufacturing","physical","intelligent","technology"]
+Manufacturing process digital, aligns with 12.5 waste reduction? maybe 12.2 efficient resource use, also 9.5. Since within SDG-12 choose 12.2 (efficient use of resources). Confidence 0.6.
+
+topic_1: terms ["supply","chain","sustainable","sustainability","management","environmental","logistics","waste","impact"]
+Clear alignment with 12.5 waste reduction or 12.2 resource management. Since includes waste, choose 12.5 (reduce waste generation). Confidence 0.78.
+
+topic_2: terms ["model","process","machining","machine","method","digital","prediction","control","performance"]
+Manufacturing machining efficiency maybe 12.2 resource efficiency. Choose 12.2 confidence 0.65.
+
+topic_3: terms ["energy","power","consumption","carbon","operation","plant","electric","systems","efficiency"]
+Align with 12.2 (efficient use of resources) particularly energy efficiency. Confidence 0.8.
+
+topic_4: terms ["robot","human","system","robotic","virtual","reality","collaborative","robots","collaboration"]
+Robotics maybe 9.5 innovation, not consumption. Might be not_related for SDG-12. cross flag true suggested SDG-09 9.5. Confidence 0.75.
+
+topic_5: terms ["production","manufacturing","scheduling","system","optimization","dynamic","simulation","planning","process"]
+Optimization of production aligns with 12.5 waste reduction (efficient scheduling) or 12.2. Choose 12.2. Confidence 0.7.
+
+topic_6: terms ["maintenance","digital","monitoring","model","fault","health","equipment","system","safety"]
+Equipment maintenance reduces waste -> 12.5 or 12.2. Choose 12.5 waste reduction via maintenance. Confidence 0.65.
+
+topic_7: terms ["healthcare","health","patient","digital","medical","personalized","patients","medicine","treatment"]
+Health domain -> not related to SDG-12, cross to SDG-03. So primary_target "not_related", cross flag true, suggested_sdg "SDG-03". Confidence 0.9.
+
+topic_8: terms ["digital","industry","twins","research","technologies","manufacturing","technology","challenges","development"]
+Industry digital twins aligns with 9.5 innovation but also 12.2 resource. Since within SDG-12 maybe 12.2. Choose 12.2 confidence 0.6.
+
+topic_9: terms ["digital","framework","real-time","systems","smart","system","approach","network","physical"]
+Smart systems for production maybe 9.c? but not. Could be 12.1 frameworks for sustainable consumption. Choose 12.1. Confidence 0.55.
+
+topic_10: terms ["water","digital","temperature","agriculture","sensor","farming","pipeline","agricultural","twins"]
+Agriculture water monitoring aligns with 12.2 resource efficiency. Confidence 0.75.
+
+topic_11: terms ["urban","digital","cities","building","management","infrastructure","planning","smart","traffic"]
+Urban digital management aligns with SDG-11 not 12. So not_related cross to SDG-11 target 11.3 perhaps. Choose not_related, cross flag true, suggested_sdg "SDG-11". Confidence 0.8.
+
+topic_12: terms ["process","material","surface","quality","grinding","materials","metal","parameters","furnace"]
+Manufacturing processes maybe 12.2 efficient use of materials. Choose 12.2 confidence 0.7.
+
+topic_13: terms ["digital","twins","systems","system","models","physical","design","model","process"]
+Digital twins for processes align with 9.5 or 12.2. Within SDG-12 choose 12.2 confidence 0.6.
+
+SDG-03 group topics:
+topic_0: generic modeling terms, not health specific. So not_related cross to SDG-09 maybe 9.5. Confidence 0.8.
+
+topic_1: cardiac models, medical; aligns with SDG-03 target 3.8 (universal health coverage) or 3.4 NCDs. Cardiac disease is NCD, target 3.4 reduction of premature mortality. choose 3.4. confidence 0.85.
+
+topic_2: digital network computing offloading refers to ICT, not health; not_related cross to SDG-09 9.c. confidence 0.8.
+
+topic_3: biomechanical tissue modeling for implants, health => 3.8 maybe device health. Could be 3.9 chemicals? No. Choose 3.8 universal health coverage (access to tech). Confidence 0.7.
+
+topic_4: robot control virtual reality safety, health maybe 3.8? but more about robotic surgery. Could be 3.8. Confidence 0.65.
+
+topic_5: acoustic images, child radiation devices, health imaging. Align with 3.9 (reduce illnesses from hazardous chemicals and radiation). Choose 3.9 confidence 0.78.
+
+topic_6: learning model detection etc water - not health specific; maybe not_related cross to SDG-09 9.5. Confidence 0.75.
+
+topic_7: pandemic modeling, immunity, covid - aligns with 3.1? Actually target 3.1 maternal, 3.2 child mortality, 3.4 NCDs, 3.8 health coverage. Pandemic modelling supports health system, maybe 3.8. Confidence 0.8.
+
+topic_8: personalized cancer treatment aligns with 3.4 (NCDs) or 3.8. Choose 3.4 (cancer is NCD). Confidence 0.85.
+
+topic_9: ventilation, respiratory mechanical - aligns with 3.9 (air pollution) maybe. But it's medical equipment; could be 3.8. Choose 3.8 confidence 0.7.
+
+topic_10: process control digital production not health, not_related cross to SDG-09 9.5. confidence 0.75.
+
+topic_11: digital smart systems management and twins research generic not health -> not_related cross to SDG-09 9.5. confidence 0.75.
+
+topic_12: liver model insulin therapy metabolic - aligns with 3.4 (NCDs diabetes). confidence 0.85.
+
+topic_13: cognitive design emergency info urban participants - maybe 3.8 universal health coverage (emergency health), but also 11.3. Since not health specific, not_related cross to SDG-11 11.3. confidence 0.7.
+
+Now compile results. Ensure each result includes fields: sdg_context (as given in group), topic_id, input_terms (terms array), primary_target (e.g., "9.2" or "not_related"), confidence_score number, reasoning brief, alternative_targets array, ambiguity_note (empty if none), cross_sdg_flag bool, suggested_sdg (if cross true else same? required field; maybe default same as sdg_context). The schema expects these fields always. We'll include suggested_sdg same as sdg_context if not cross else the suggested other.
+
+Let's craft JSON list.
+
+We must ensure total_topics_processed equals count of all topics: Let's count.
+
+SDG-09 group: topics 0-13 =14 topics.
+
+SDG-11 group: topics 0-13 =14.
+
+SDG-12 group: topics 0-13 =14.
+
+SDG-03 group: topics 0-13 =14.
+
+Total =56.
+
+Now produce list of 56 objects.
+
+Will need to be careful with confidence as decimal.
+
+Let's draft.
