@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "task": "LDA topic terms to SDG target classification",
+    "version": "2.0",
+    "classification_scope": ["SDG-03", "SDG-09", "SDG-11", "SDG-12"],
+    "output_format": "strict_json_schema"
+  },
+  
+  "sdg_targets_reference": {
+    "SDG-09": {
+      "title": "Industry, Innovation and Infrastructure",
+      "targets": {
+        "9.1": "Develop quality, reliable, sustainable and resilient infrastructure, including regional and transborder infrastructure, to support economic development and human well-being, with a focus on affordable and equitable access for all",
+        "9.2": "Promote inclusive and sustainable industrialization and, by 2030, significantly raise industry's share of employment and gross domestic product",
+        "9.3": "Increase the access of small-scale industrial and other enterprises to financial services, including affordable credit, and their integration into value chains and markets",
+        "9.4": "Upgrade infrastructure and retrofit industries to make them sustainable, with increased resource-use efficiency and greater adoption of clean and environmentally sound technologies",
+        "9.5": "Enhance scientific research, upgrade the technological capabilities of industrial sectors, encouraging innovation and substantially increasing R&D workers and spending",
+        "9.a": "Facilitate sustainable and resilient infrastructure development in developing countries through enhanced financial, technological and technical support",
+        "9.b": "Support domestic technology development, research and innovation in developing countries, including conducive policy environment for industrial diversification",
+        "9.c": "Significantly increase access to information and communications technology and strive to provide universal and affordable access to the Internet in least developed countries"
+      }
+    },
+    "SDG-11": {
+      "title": "Sustainable Cities and Communities",
+      "targets": {
+        "11.1": "Ensure access for all to adequate, safe and affordable housing and basic services and upgrade slums",
+        "11.2": "Provide access to safe, affordable, accessible and sustainable transport systems for all",
+        "11.3": "Enhance inclusive and sustainable urbanization and capacity for participatory, integrated and sustainable human settlement planning",
+        "11.a": "Support positive economic, social and environmental links between urban, peri-urban and rural areas by strengthening national and regional development planning",
+        "11.b": "Substantially increase the number of cities and human settlements adopting and implementing integrated policies and plans towards inclusion, resource efficiency, mitigation and adaptation to climate change"
+      }
+    },
+    "SDG-12": {
+      "title": "Responsible Consumption and Production",
+      "targets": {
+        "12.1": "Implement the 10-Year Framework of Programmes on Sustainable Consumption and Production Patterns",
+        "12.2": "Achieve the sustainable management and efficient use of natural resources",
+        "12.3": "Halve per capita global food waste at the retail and consumer levels and reduce food losses along production and supply chains",
+        "12.4": "Achieve the environmentally sound management of chemicals and all wastes throughout their life cycle and significantly reduce their release to air, water and soil",
+        "12.5": "Substantially reduce waste generation through prevention, reduction, recycling and reuse",
+        "12.b": "Develop and implement tools to monitor sustainable development impacts for sustainable tourism"
+      }
+    },
+    "SDG-03": {
+      "title": "Good Health and Well-being",
+      "targets": {
+        "3.1": "Reduce the global maternal mortality ratio to less than 70 per 100,000 live births",
+        "3.2": "End preventable deaths of newborns and children under 5 years of age",
+        "3.4": "Reduce by one third premature mortality from non-communicable diseases through prevention and treatment",
+        "3.8": "Achieve universal health coverage, including financial risk protection, access to quality essential health-care services",
+        "3.9": "Substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water and soil pollution and contamination"
+      }
+    }
+  },
+
+  "topics_to_classify": {
+    "SDG-09": [
+      {"topic_id": "topic_0", "terms": ["model", "digital", "system", "performance", "prediction", "accuracy", "learning", "detection", "results"]},
+      {"topic_id": "topic_1", "terms": ["healthcare", "health", "digital", "patient", "medical", "personalized", "medicine", "patients", "treatment"]},
+      {"topic_id": "topic_2", "terms": ["digital", "model", "method", "system", "process", "technology", "intelligent", "physical", "control"]},
+      {"topic_id": "topic_3", "terms": ["digital", "industry", "research", "technologies", "technology", "analysis", "review", "literature", "challenges"]},
+      {"topic_id": "topic_4", "terms": ["digital", "framework", "systems", "real-time", "challenges", "integration", "technology", "monitoring", "management"]},
+      {"topic_id": "topic_5", "terms": ["network", "networks", "security", "resource", "service", "cloud", "computing", "allocation", "services"]},
+      {"topic_id": "topic_6", "terms": ["urban", "cities", "smart", "planning", "water", "management", "infrastructure", "digital", "transportation"]},
+      {"topic_id": "topic_7", "terms": ["manufacturing", "production", "system", "smart", "process", "systems", "industry", "simulation", "product"]},
+      {"topic_id": "topic_8", "terms": ["digital", "twins", "systems", "physical", "models", "system", "development", "design", "which"]},
+      {"topic_id": "topic_9", "terms": ["energy", "power", "consumption", "carbon", "waste", "operation", "plant", "emissions", "electric"]},
+      {"topic_id": "topic_10", "terms": ["virtual", "system", "robot", "human", "robotic", "reality", "robots", "control", "environment"]},
+      {"topic_id": "topic_11", "terms": ["process", "manufacturing", "quality", "additive", "machining", "material", "parts", "machine", "parameters"]},
+      {"topic_id": "topic_12", "terms": ["agriculture", "agricultural", "farming", "maritime", "twins", "fruit", "product", "forest", "marine"]},
+      {"topic_id": "topic_13", "terms": ["construction", "building", "information", "management", "model", "safety", "buildings", "maintenance", "project"]}
+    ],
+    "SDG-11": [
+      {"topic_id": "topic_0", "terms": ["energy", "building", "buildings", "thermal", "consumption", "carbon", "emissions", "model", "digital"]},
+      {"topic_id": "topic_1", "terms": ["system", "control", "digital", "simulation", "model", "design", "which", "systems", "controller"]},
+      {"topic_id": "topic_2", "terms": ["model", "digital", "models", "method", "prediction", "accuracy", "learning", "results", "real-time"]},
+      {"topic_id": "topic_3", "terms": ["metaverse", "virtual", "design", "transport", "reality", "social", "users", "semantic", "experience"]},
+      {"topic_id": "topic_4", "terms": ["urban", "cities", "planning", "water", "resilience", "areas", "disaster", "community", "sustainable"]},
+      {"topic_id": "topic_5", "terms": ["digital", "computing", "network", "problem", "networks", "offloading", "resource", "algorithm", "optimization"]},
+      {"topic_id": "topic_6", "terms": ["security", "attacks", "blockchain", "against", "layer", "control", "secure", "nuclear", "resilient"]},
+      {"topic_id": "topic_7", "terms": ["structural", "model", "damage", "bridge", "digital", "structure", "monitoring", "structures", "analysis"]},
+      {"topic_id": "topic_8", "terms": ["traffic", "vehicle", "vehicles", "driving", "autonomous", "control", "system", "transportation", "safety"]},
+      {"topic_id": "topic_9", "terms": ["digital", "management", "smart", "systems", "research", "system", "framework", "technology", "twins"]},
+      {"topic_id": "topic_10", "terms": ["human", "logistics", "content", "graph", "video", "recognition", "streaming", "spatial-temporal", "users"]},
+      {"topic_id": "topic_11", "terms": ["circular", "construction", "economy", "waste", "product", "sustainable", "industry", "supply", "manufacturing"]},
+      {"topic_id": "topic_12", "terms": ["point", "method", "construction", "image", "tunnel", "images", "cloud", "scene", "registration"]},
+      {"topic_id": "topic_13", "terms": ["battery", "batteries", "electric", "charging", "lithium-ion", "process", "degradation", "estimation", "capacity"]}
+    ],
+    "SDG-12": [
+      {"topic_id": "topic_0", "terms": ["digital", "model", "system", "method", "process", "manufacturing", "physical", "intelligent", "technology"]},
+      {"topic_id": "topic_1", "terms": ["supply", "chain", "sustainable", "sustainability", "management", "environmental", "logistics", "waste", "impact"]},
+      {"topic_id": "topic_2", "terms": ["model", "process", "machining", "machine", "method", "digital", "prediction", "control", "performance"]},
+      {"topic_id": "topic_3", "terms": ["energy", "power", "consumption", "carbon", "operation", "plant", "electric", "systems", "efficiency"]},
+      {"topic_id": "topic_4", "terms": ["robot", "human", "system", "robotic", "virtual", "reality", "collaborative", "robots", "collaboration"]},
+      {"topic_id": "topic_5", "terms": ["production", "manufacturing", "scheduling", "system", "optimization", "dynamic", "simulation", "planning", "process"]},
+      {"topic_id": "topic_6", "terms": ["maintenance", "digital", "monitoring", "model", "fault", "health", "equipment", "system", "safety"]},
+      {"topic_id": "topic_7", "terms": ["healthcare", "health", "patient", "digital", "medical", "personalized", "patients", "medicine", "treatment"]},
+      {"topic_id": "topic_8", "terms": ["digital", "industry", "twins", "research", "technologies", "manufacturing", "technology", "challenges", "development"]},
+      {"topic_id": "topic_9", "terms": ["digital", "framework", "real-time", "systems", "smart", "system", "approach", "network", "physical"]},
+      {"topic_id": "topic_10", "terms": ["water", "digital", "temperature", "agriculture", "sensor", "farming", "pipeline", "agricultural", "twins"]},
+      {"topic_id": "topic_11", "terms": ["urban", "digital", "cities", "building", "management", "infrastructure", "planning", "smart", "traffic"]},
+      {"topic_id": "topic_12", "terms": ["process", "material", "surface", "quality", "grinding", "materials", "metal", "parameters", "furnace"]},
+      {"topic_id": "topic_13", "terms": ["digital", "twins", "systems", "system", "models", "physical", "design", "model", "process"]}
+    ],
+    "SDG-03": [
+      {"topic_id": "topic_0", "terms": ["model", "digital", "which", "models", "results", "approach", "different", "system", "parameters"]},
+      {"topic_id": "topic_1", "terms": ["cardiac", "heart", "clinical", "atrial", "models", "ablation", "ventricular", "digital", "patients"]},
+      {"topic_id": "topic_2", "terms": ["digital", "network", "computing", "offloading", "resource", "problem", "networks", "algorithm", "learning"]},
+      {"topic_id": "topic_3", "terms": ["mechanical", "element", "finite", "biomechanical", "tissue", "forces", "implant", "patient-specific", "design"]},
+      {"topic_id": "topic_4", "terms": ["system", "robot", "control", "virtual", "robotic", "digital", "safety", "reality", "interaction"]},
+      {"topic_id": "topic_5", "terms": ["acoustic", "images", "structures", "electron", "platform", "child", "radiation", "devices", "sound"]},
+      {"topic_id": "topic_6", "terms": ["learning", "model", "digital", "detection", "models", "accuracy", "performance", "network", "water"]},
+      {"topic_id": "topic_7", "terms": ["cells", "pandemic", "these", "covid-19", "modeling", "immune", "spread", "sars-cov-2", "mechanisms"]},
+      {"topic_id": "topic_8", "terms": ["patients", "clinical", "digital", "patient", "treatment", "personalized", "cancer", "outcomes", "disease"]},
+      {"topic_id": "topic_9", "terms": ["pressure", "ventilation", "respiratory", "mechanical", "particle", "workers", "virtual", "breathing", "volume"]},
+      {"topic_id": "topic_10", "terms": ["process", "control", "digital", "production", "manufacturing", "development", "operation", "continuous", "processes"]},
+      {"topic_id": "topic_11", "terms": ["digital", "smart", "systems", "management", "technologies", "technology", "challenges", "twins", "research"]},
+      {"topic_id": "topic_12", "terms": ["liver", "model", "stimulation", "insulin", "fentanyl", "glucose", "therapy", "blood", "metabolic"]},
+      {"topic_id": "topic_13", "terms": ["cognitive", "design", "space", "brain", "health", "emergency", "information", "urban", "participants"]}
+    ]
+  }
+}
