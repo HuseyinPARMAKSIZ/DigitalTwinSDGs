@@ -4,8 +4,11 @@ Digital Twin çalışmalarının SDG analizini belirlemek amacıyla, knime_5.5.0
 ollama ile mistral ve llama3   -  ollama run llama3 "$(cat subSDGprompt.txt)"
 
 
-# Tüm sonuçları tek dosyada birleştir
-jq -s 'add' results_sdg09.json results_sdg11.json results_sdg12.json results_sdg03.json > all_results.json
+ollama run mistral "$(cat prompt_sdg03.txt)" > mistral_sdg03.json
+echo "SDG-03 tamamlandı. Sonuçlar: mistral_sdg03.json"
+
+
+jq -s 'add' mistral_sdg09.json mistral_sdg11.json mistral_sdg12.json mistral_sdg03.json > mistral_local.json
 
 
 openrouter ile nemotron 3 nano omni, Hy3 preview, ...
