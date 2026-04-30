@@ -1,0 +1,38 @@
+You are an SDG classification machine. Output ONLY valid JSON array. No chat. No explanations.
+
+## TASK: Classify these 14 topics from SDG-03 context. Assign EXACTLY ONE SDG target per topic.
+
+## OUTPUT SCHEMA
+[{"sdg_context":"SDG-03","topic_id":"topic_N","input_terms":[],"primary_target":"XX.Y or not_related","confidence_score":0.0,"reasoning":"brief justification citing specific terms","alternative_targets":[],"ambiguity_note":"","cross_sdg_flag":false,"suggested_sdg":""}]
+
+## SDG TARGETS REFERENCE
+SDG-03 (Good Health): 3.1(maternal mortality), 3.2(newborn/child deaths), 3.3(epidemics: AIDS,TB,malaria,hepatitis), 3.4(NCD premature mortality, mental health), 3.5(substance abuse), 3.6(road traffic accidents), 3.7(sexual/reproductive health), 3.8(universal health coverage, essential medicines/vaccines), 3.9(hazardous chemicals, pollution deaths), 3.b(vaccines/medicines R&D), 3.c(health workforce/financing), 3.d(health risk early warning)
+SDG-09 (Industry/Innovation): 9.1(quality,sustainable,resilient infrastructure), 9.2(inclusive sustainable industrialization), 9.3(SME financial services, value chains), 9.4(sustainable infrastructure/industries, clean technologies, resource efficiency), 9.5(scientific research, R&D, innovation, researchers), 9.a(developing countries infrastructure support), 9.b(domestic technology development, innovation policy), 9.c(universal ICT/Internet access)
+SDG-11 (Sustainable Cities): 11.1(adequate,safe,affordable housing, slums), 11.2(safe,sustainable transport systems), 11.3(inclusive sustainable urbanization, settlement planning), 11.4(cultural/natural heritage protection), 11.5(disaster deaths/economic losses reduction), 11.6(urban environmental impact, air quality, waste), 11.7(green/public spaces), 11.a(urban-rural linkages, regional planning), 11.b(inclusion, resource efficiency, climate resilience policies), 11.c(sustainable buildings with local materials)
+SDG-12 (Responsible Consumption/Production): 12.1(10-Year SCP Framework), 12.2(sustainable natural resource management/efficiency), 12.3(halve food waste, reduce supply chain losses), 12.4(chemical/waste lifecycle management, reduce release), 12.5(waste prevention/reduction/recycling/reuse), 12.6(corporate sustainability reporting), 12.7(sustainable public procurement), 12.8(sustainable development awareness), 12.a(developing countries SCP capacity), 12.b(sustainable tourism monitoring), 12.c(fossil fuel subsidy reform)
+Cross-SDG: SDG-02(2.4: sustainable agriculture), SDG-06(6.1:drinking water, 6.3:water quality, 6.4:water efficiency), SDG-07(7.2:renewable energy, 7.3:energy efficiency), SDG-08(8.2:economic productivity/innovation, 8.4:resource efficiency), SDG-13(13.1:climate resilience, 13.2:climate planning)
+
+## RULES
+1. Match topic terms to SINGLE most appropriate target using keyword overlap, domain context, functional alignment
+2. Use "not_related" if terms are too generic or confidence <0.4
+3. If topic clearly belongs to different SDG than SDG-03, set cross_sdg_flag=true and fill suggested_sdg
+4. If two targets both >0.6 confidence, list second as alternative_targets and add ambiguity_note
+5. Reasoning MUST cite specific terms that match target description
+
+## INPUT DATA (14 topics from SDG-03):
+{"sdg_context":"SDG-03","topic_id":"topic_0","terms":["model","digital","which","models","results","approach","different","system","parameters"]}
+{"sdg_context":"SDG-03","topic_id":"topic_1","terms":["cardiac","heart","clinical","atrial","models","ablation","ventricular","digital","patients"]}
+{"sdg_context":"SDG-03","topic_id":"topic_2","terms":["digital","network","computing","offloading","resource","problem","networks","algorithm","learning"]}
+{"sdg_context":"SDG-03","topic_id":"topic_3","terms":["mechanical","element","finite","biomechanical","tissue","forces","implant","patient-specific","design"]}
+{"sdg_context":"SDG-03","topic_id":"topic_4","terms":["system","robot","control","virtual","robotic","digital","safety","reality","interaction"]}
+{"sdg_context":"SDG-03","topic_id":"topic_5","terms":["acoustic","images","structures","electron","platform","child","radiation","devices","sound"]}
+{"sdg_context":"SDG-03","topic_id":"topic_6","terms":["learning","model","digital","detection","models","accuracy","performance","network","water"]}
+{"sdg_context":"SDG-03","topic_id":"topic_7","terms":["cells","pandemic","these","covid-19","modeling","immune","spread","sars-cov-2","mechanisms"]}
+{"sdg_context":"SDG-03","topic_id":"topic_8","terms":["patients","clinical","digital","patient","treatment","personalized","cancer","outcomes","disease"]}
+{"sdg_context":"SDG-03","topic_id":"topic_9","terms":["pressure","ventilation","respiratory","mechanical","particle","workers","virtual","breathing","volume"]}
+{"sdg_context":"SDG-03","topic_id":"topic_10","terms":["process","control","digital","production","manufacturing","development","operation","continuous","processes"]}
+{"sdg_context":"SDG-03","topic_id":"topic_11","terms":["digital","smart","systems","management","technologies","technology","challenges","twins","research"]}
+{"sdg_context":"SDG-03","topic_id":"topic_12","terms":["liver","model","stimulation","insulin","fentanyl","glucose","therapy","blood","metabolic"]}
+{"sdg_context":"SDG-03","topic_id":"topic_13","terms":["cognitive","design","space","brain","health","emergency","information","urban","participants"]}
+
+## OUTPUT ONLY VALID JSON ARRAY. START WITH [ AND END WITH ]. NO MARKDOWN, NO TEXT BEFORE OR AFTER.
