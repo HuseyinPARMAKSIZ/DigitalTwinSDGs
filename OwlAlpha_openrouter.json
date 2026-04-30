@@ -1234,7 +1234,7 @@
     }
   ],
   "metadata": {
-    "model_used": "llama3",
+    "model_used": "OwlAlpha_openrouter",
     "classification_timestamp": "2026-04-30T00:00:00Z",
     "prompt_version": "3.0",
     "total_topics_processed": 56
