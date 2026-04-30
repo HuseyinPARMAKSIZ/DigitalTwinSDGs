@@ -1,0 +1,730 @@
+[
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_0",
+    "input_terms": [],
+    "primary_target": "9.5(scientific research, R&D, innovation, researchers)",
+    "confidence_score": 1.0,
+    "reasoning": "The topic terms include 'model', 'digital', and 'system', which align with the target description of scientific research and innovation.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_1",
+    "input_terms": [],
+    "primary_target": "3.8(universal health coverage, essential medicines/vaccines)",
+    "confidence_score": 0.9,
+    "reasoning": "The topic terms include 'healthcare', 'digital', and 'medical', which align with the target description of universal health coverage.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_2",
+    "input_terms": [],
+    "primary_target": "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "confidence_score": 0.8,
+    "reasoning": "The topic terms include 'digital', 'model', and 'system', which align with the target description of sustainable infrastructure.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_3",
+    "input_terms": [],
+    "primary_target": "9.5(scientific research, R&D, innovation, researchers)",
+    "confidence_score": 0.7,
+    "reasoning": "The topic terms include 'digital', 'industry', and 'research', which align with the target description of scientific research.",
+    "alternative_targets": [
+      "9.3(SME financial services, value chains)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_4",
+    "input_terms": [],
+    "primary_target": "9.1(quality, sustainable, resilient infrastructure)",
+    "confidence_score": 0.6,
+    "reasoning": "The topic terms include 'digital', 'framework', and 'infrastructure', which align with the target description of quality infrastructure.",
+    "alternative_targets": [
+      "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_5",
+    "input_terms": [],
+    "primary_target": "9.c(universal ICT/Internet access)",
+    "confidence_score": 0.8,
+    "reasoning": "The topic terms include 'network', 'cloud', and 'computing', which align with the target description of universal ICT.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_6",
+    "input_terms": [],
+    "primary_target": "11.2(safe, sustainable transport systems)",
+    "confidence_score": 0.7,
+    "reasoning": "The topic terms include 'urban', 'cities', and 'transportation', which align with the target description of safe transportation.",
+    "alternative_targets": [
+      "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_7",
+    "input_terms": [],
+    "primary_target": "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "confidence_score": 0.8,
+    "reasoning": "The topic terms include 'manufacturing', 'production', and 'system', which align with the target description of sustainable industries.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_8",
+    "input_terms": [],
+    "primary_target": "9.5(scientific research, R&D, innovation, researchers)",
+    "confidence_score": 0.6,
+    "reasoning": "The topic terms include 'digital', 'twins', and 'physical', which align with the target description of scientific research.",
+    "alternative_targets": [
+      "9.3(SME financial services, value chains)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_9",
+    "input_terms": [],
+    "primary_target": "7.2(renewable energy)",
+    "confidence_score": 0.7,
+    "reasoning": "The topic terms include 'energy', 'power', and 'renewable', which align with the target description of renewable energy.",
+    "alternative_targets": [
+      "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_10",
+    "input_terms": [],
+    "primary_target": "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "confidence_score": 0.6,
+    "reasoning": "The topic terms include 'virtual', 'system', and 'robotic', which align with the target description of sustainable industries.",
+    "alternative_targets": [
+      "11.2(safe, sustainable transport systems)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_11",
+    "input_terms": [],
+    "primary_target": "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "confidence_score": 0.8,
+    "reasoning": "The topic terms include 'process', 'manufacturing', and 'quality', which align with the target description of sustainable industries.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_12",
+    "input_terms": [],
+    "primary_target": "2.4(sustainable agriculture)",
+    "confidence_score": 0.5,
+    "reasoning": "The topic terms include 'agriculture', 'farming', and 'fruit', which align with the target description of sustainable agriculture.",
+    "alternative_targets": [
+      "12.3(halve food waste, reduce supply chain losses)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": true,
+    "suggested_sdg": "SDG-02"
+  },
+  {
+    "sdg_context": "SDG-09",
+    "topic_id": "topic_13",
+    "input_terms": [],
+    "primary_target": "11.a(urban-rural linkages, regional planning)",
+    "confidence_score": 0.6,
+    "reasoning": "The topic terms include 'construction', 'building', and 'information', which align with the target description of urban-rural linkages.",
+    "alternative_targets": [
+      "9.4(sustainable infrastructure/industries, clean technologies, resource efficiency)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_0",
+    "input_terms": [],
+    "primary_target": "9.4 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms related to energy efficiency, sustainable infrastructure and industries; keyword overlap with SDG target 9.4 (sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_1",
+    "input_terms": [],
+    "primary_target": "9.5 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms related to digital systems, simulation and design; keyword overlap with SDG target 9.5 (scientific research, R&D, innovation, researchers)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_2",
+    "input_terms": [],
+    "primary_target": "3.1 or not_related",
+    "confidence_score": 0.6,
+    "reasoning": "terms related to digital models, prediction and accuracy; keyword overlap with SDG target 3.1 (maternal mortality)",
+    "alternative_targets": [
+      "9.5"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_3",
+    "input_terms": [],
+    "primary_target": "not_related",
+    "confidence_score": 0.2,
+    "reasoning": "terms related to virtual reality, social experience and users; no clear keyword overlap with SDG targets",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": true,
+    "suggested_sdg": "SDG-03"
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_4",
+    "input_terms": [],
+    "primary_target": "11.1 or not_related",
+    "confidence_score": 0.9,
+    "reasoning": "terms related to urban planning, water resilience and sustainable cities; keyword overlap with SDG target 11.1 (adequate, safe, affordable housing, slums)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_5",
+    "input_terms": [],
+    "primary_target": "9.3 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms related to digital computing, networks and optimization; keyword overlap with SDG target 9.3 (SME financial services, value chains)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_6",
+    "input_terms": [],
+    "primary_target": "9.1 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms related to digital security, blockchain and control; keyword overlap with SDG target 9.1 (quality, sustainable, resilient infrastructure)",
+    "alternative_targets": [
+      "11.2"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_7",
+    "input_terms": [],
+    "primary_target": "11.3 or not_related",
+    "confidence_score": 0.6,
+    "reasoning": "terms related to structural monitoring and analysis; keyword overlap with SDG target 11.3 (inclusive sustainable urbanization, settlement planning)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_8",
+    "input_terms": [],
+    "primary_target": "9.2 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms related to autonomous vehicles, traffic control and safety; keyword overlap with SDG target 9.2 (inclusive sustainable industrialization)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_9",
+    "input_terms": [],
+    "primary_target": "9.5 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms related to digital management, smart systems and research; keyword overlap with SDG target 9.5 (scientific research, R&D, innovation, researchers)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_10",
+    "input_terms": [],
+    "primary_target": "not_related",
+    "confidence_score": 0.2,
+    "reasoning": "terms related to human logistics, content and graph; no clear keyword overlap with SDG targets",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": true,
+    "suggested_sdg": "SDG-08"
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_11",
+    "input_terms": [],
+    "primary_target": "12.5 or not_related",
+    "confidence_score": 0.9,
+    "reasoning": "terms related to circular economy, sustainable industry and waste reduction; keyword overlap with SDG target 12.5 (waste prevention/reduction/recycling/reuse)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_12",
+    "input_terms": [],
+    "primary_target": "9.4 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms related to construction, image registration and scene understanding; keyword overlap with SDG target 9.4 (sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-11",
+    "topic_id": "topic_13",
+    "input_terms": [],
+    "primary_target": "9.4 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms related to battery life, degradation and estimation; keyword overlap with SDG target 9.4 (sustainable infrastructure/industries, clean technologies, resource efficiency)",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_0",
+    "input_terms": [],
+    "primary_target": "12.1 or not_related",
+    "confidence_score": 0.6,
+    "reasoning": "terms such as 'digital', 'method', and 'process' align with the 10-Year SCP Framework target",
+    "alternative_targets": [
+      "9.4"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_1",
+    "input_terms": [],
+    "primary_target": "12.2 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms such as 'supply', 'chain', and 'sustainability' align with sustainable natural resource management/efficiency target",
+    "alternative_targets": [
+      "11.b"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_2",
+    "input_terms": [],
+    "primary_target": "12.3 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms such as 'model', 'process', and 'prediction' align with halve food waste target",
+    "alternative_targets": [
+      "9.5"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_3",
+    "input_terms": [],
+    "primary_target": "9.4 or not_related",
+    "confidence_score": 0.5,
+    "reasoning": "terms such as 'energy', 'power', and 'efficiency' align with sustainable infrastructure/industries target",
+    "alternative_targets": [
+      "12.1"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_4",
+    "input_terms": [],
+    "primary_target": "9.1 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms such as 'robot', 'system', and 'collaboration' align with quality, sustainable, resilient infrastructure target",
+    "alternative_targets": [
+      "12.4"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_5",
+    "input_terms": [],
+    "primary_target": "9.3 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms such as 'production', 'manufacturing', and 'optimization' align with SME financial services, value chains target",
+    "alternative_targets": [
+      "12.5"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_6",
+    "input_terms": [],
+    "primary_target": "12.4 or not_related",
+    "confidence_score": 0.9,
+    "reasoning": "terms such as 'maintenance', 'digital', and 'monitoring' align with chemical/waste lifecycle management target",
+    "alternative_targets": [
+      "9.2"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_7",
+    "input_terms": [],
+    "primary_target": "3.8 or not_related",
+    "confidence_score": 0.4,
+    "reasoning": "terms such as 'healthcare', 'digital', and 'patients' align with universal health coverage target",
+    "alternative_targets": [
+      "12.7"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_8",
+    "input_terms": [],
+    "primary_target": "9.5 or not_related",
+    "confidence_score": 0.6,
+    "reasoning": "terms such as 'digital', 'industry', and 'research' align with scientific research, R&D target",
+    "alternative_targets": [
+      "12.1"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_9",
+    "input_terms": [],
+    "primary_target": "12.1 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms such as 'digital', 'framework', and 'real-time' align with 10-Year SCP Framework target",
+    "alternative_targets": [
+      "9.4"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_10",
+    "input_terms": [],
+    "primary_target": "6.1 or not_related",
+    "confidence_score": 0.5,
+    "reasoning": "terms such as 'water', 'digital', and 'temperature' align with drinking water target",
+    "alternative_targets": [
+      "12.3"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_11",
+    "input_terms": [],
+    "primary_target": "11.1 or not_related",
+    "confidence_score": 0.8,
+    "reasoning": "terms such as 'urban', 'digital', and 'cities' align with adequate, safe, affordable housing target",
+    "alternative_targets": [
+      "12.2"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_12",
+    "input_terms": [],
+    "primary_target": "9.1 or not_related",
+    "confidence_score": 0.6,
+    "reasoning": "terms such as 'process', 'material', and 'quality' align with quality, sustainable, resilient infrastructure target",
+    "alternative_targets": [
+      "12.4"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-12",
+    "topic_id": "topic_13",
+    "input_terms": [],
+    "primary_target": "9.5 or not_related",
+    "confidence_score": 0.7,
+    "reasoning": "terms such as 'digital', 'twins', and 'models' align with scientific research, R&D target",
+    "alternative_targets": [
+      "12.1"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_0",
+    "input_terms": [],
+    "primary_target": "3.b(vaccines/medicines R&D)",
+    "confidence_score": 0.8,
+    "reasoning": "Keyword overlap with 'model' and 'digital' in target description.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_1",
+    "input_terms": [],
+    "primary_target": "3.4(NCD premature mortality, mental health)",
+    "confidence_score": 0.7,
+    "reasoning": "Domain context and functional alignment with cardiac and clinical terms.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_2",
+    "input_terms": [],
+    "primary_target": "3.d(health risk early warning)",
+    "confidence_score": 0.6,
+    "reasoning": "Keyword overlap with 'digital' and 'network' in target description.",
+    "alternative_targets": [
+      "9.c(universal ICT/Internet access)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_3",
+    "input_terms": [],
+    "primary_target": "3.8(universal health coverage, essential medicines/vaccines)",
+    "confidence_score": 0.9,
+    "reasoning": "Domain context and functional alignment with biomechanical terms.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_4",
+    "input_terms": [],
+    "primary_target": "3.7(sexual/reproductive health)",
+    "confidence_score": 0.5,
+    "reasoning": "Domain context and functional alignment with robotic terms.",
+    "alternative_targets": [
+      "11.c(sustainable buildings with local materials)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_5",
+    "input_terms": [],
+    "primary_target": "3.6(road traffic accidents)",
+    "confidence_score": 0.7,
+    "reasoning": "Keyword overlap with 'acoustic' and 'images' in target description.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_6",
+    "input_terms": [],
+    "primary_target": "3.1(maternal mortality)",
+    "confidence_score": 0.4,
+    "reasoning": "Domain context and functional alignment with learning terms.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_7",
+    "input_terms": [],
+    "primary_target": "3.3(epidemics: AIDS,TB,malaria,hepatitis)",
+    "confidence_score": 0.8,
+    "reasoning": "Domain context and functional alignment with pandemic terms.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_8",
+    "input_terms": [],
+    "primary_target": "3.c(health workforce/financing)",
+    "confidence_score": 0.6,
+    "reasoning": "Domain context and functional alignment with clinical terms.",
+    "alternative_targets": [
+      "12.7(sustainable public procurement)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_9",
+    "input_terms": [],
+    "primary_target": "3.6(road traffic accidents)",
+    "confidence_score": 0.8,
+    "reasoning": "Keyword overlap with 'pressure' and 'ventilation' in target description.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_10",
+    "input_terms": [],
+    "primary_target": "3.8(universal health coverage, essential medicines/vaccines)",
+    "confidence_score": 0.7,
+    "reasoning": "Domain context and functional alignment with process terms.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_11",
+    "input_terms": [],
+    "primary_target": "3.b(vaccines/medicines R&D)",
+    "confidence_score": 0.9,
+    "reasoning": "Keyword overlap with 'digital' and 'smart' in target description.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_12",
+    "input_terms": [],
+    "primary_target": "3.4(NCD premature mortality, mental health)",
+    "confidence_score": 0.6,
+    "reasoning": "Domain context and functional alignment with liver terms.",
+    "alternative_targets": [
+      "8.4(resource efficiency)"
+    ],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  },
+  {
+    "sdg_context": "SDG-03",
+    "topic_id": "topic_13",
+    "input_terms": [],
+    "primary_target": "not_related",
+    "confidence_score": 0.2,
+    "reasoning": "Terms too generic, no clear alignment with SDG-03 targets.",
+    "alternative_targets": [],
+    "ambiguity_note": "",
+    "cross_sdg_flag": false,
+    "suggested_sdg": ""
+  }
+]
