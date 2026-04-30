@@ -1,0 +1,38 @@
+You are an SDG classification machine. Output ONLY valid JSON array. No chat. No explanations.
+
+## TASK: Classify these 14 topics from SDG-09 context. Assign EXACTLY ONE SDG target per topic.
+
+## OUTPUT SCHEMA
+[{"sdg_context":"SDG-09","topic_id":"topic_N","input_terms":[],"primary_target":"XX.Y or not_related","confidence_score":0.0,"reasoning":"brief justification citing specific terms","alternative_targets":[],"ambiguity_note":"","cross_sdg_flag":false,"suggested_sdg":""}]
+
+## SDG TARGETS REFERENCE
+SDG-03 (Good Health): 3.1(maternal mortality), 3.2(newborn/child deaths), 3.3(epidemics: AIDS,TB,malaria,hepatitis), 3.4(NCD premature mortality, mental health), 3.5(substance abuse), 3.6(road traffic accidents), 3.7(sexual/reproductive health), 3.8(universal health coverage, essential medicines/vaccines), 3.9(hazardous chemicals, pollution deaths), 3.b(vaccines/medicines R&D), 3.c(health workforce/financing), 3.d(health risk early warning)
+SDG-09 (Industry/Innovation): 9.1(quality,sustainable,resilient infrastructure), 9.2(inclusive sustainable industrialization), 9.3(SME financial services, value chains), 9.4(sustainable infrastructure/industries, clean technologies, resource efficiency), 9.5(scientific research, R&D, innovation, researchers), 9.a(developing countries infrastructure support), 9.b(domestic technology development, innovation policy), 9.c(universal ICT/Internet access)
+SDG-11 (Sustainable Cities): 11.1(adequate,safe,affordable housing, slums), 11.2(safe,sustainable transport systems), 11.3(inclusive sustainable urbanization, settlement planning), 11.4(cultural/natural heritage protection), 11.5(disaster deaths/economic losses reduction), 11.6(urban environmental impact, air quality, waste), 11.7(green/public spaces), 11.a(urban-rural linkages, regional planning), 11.b(inclusion, resource efficiency, climate resilience policies), 11.c(sustainable buildings with local materials)
+SDG-12 (Responsible Consumption/Production): 12.1(10-Year SCP Framework), 12.2(sustainable natural resource management/efficiency), 12.3(halve food waste, reduce supply chain losses), 12.4(chemical/waste lifecycle management, reduce release), 12.5(waste prevention/reduction/recycling/reuse), 12.6(corporate sustainability reporting), 12.7(sustainable public procurement), 12.8(sustainable development awareness), 12.a(developing countries SCP capacity), 12.b(sustainable tourism monitoring), 12.c(fossil fuel subsidy reform)
+Cross-SDG: SDG-02(2.4: sustainable agriculture), SDG-06(6.1:drinking water, 6.3:water quality, 6.4:water efficiency), SDG-07(7.2:renewable energy, 7.3:energy efficiency), SDG-08(8.2:economic productivity/innovation, 8.4:resource efficiency), SDG-13(13.1:climate resilience, 13.2:climate planning)
+
+## RULES
+1. Match topic terms to SINGLE most appropriate target using keyword overlap, domain context, functional alignment
+2. Use "not_related" if terms are too generic or confidence <0.4
+3. If topic clearly belongs to different SDG than SDG-09, set cross_sdg_flag=true and fill suggested_sdg
+4. If two targets both >0.6 confidence, list second as alternative_targets and add ambiguity_note
+5. Reasoning MUST cite specific terms that match target description
+
+## INPUT DATA (14 topics from SDG-09):
+{"sdg_context":"SDG-09","topic_id":"topic_0","terms":["model","digital","system","performance","prediction","accuracy","learning","detection","results"]}
+{"sdg_context":"SDG-09","topic_id":"topic_1","terms":["healthcare","health","digital","patient","medical","personalized","medicine","patients","treatment"]}
+{"sdg_context":"SDG-09","topic_id":"topic_2","terms":["digital","model","method","system","process","technology","intelligent","physical","control"]}
+{"sdg_context":"SDG-09","topic_id":"topic_3","terms":["digital","industry","research","technologies","technology","analysis","review","literature","challenges"]}
+{"sdg_context":"SDG-09","topic_id":"topic_4","terms":["digital","framework","systems","real-time","challenges","integration","technology","monitoring","management"]}
+{"sdg_context":"SDG-09","topic_id":"topic_5","terms":["network","networks","security","resource","service","cloud","computing","allocation","services"]}
+{"sdg_context":"SDG-09","topic_id":"topic_6","terms":["urban","cities","smart","planning","water","management","infrastructure","digital","transportation"]}
+{"sdg_context":"SDG-09","topic_id":"topic_7","terms":["manufacturing","production","system","smart","process","systems","industry","simulation","product"]}
+{"sdg_context":"SDG-09","topic_id":"topic_8","terms":["digital","twins","systems","physical","models","system","development","design","which"]}
+{"sdg_context":"SDG-09","topic_id":"topic_9","terms":["energy","power","consumption","carbon","waste","operation","plant","emissions","electric"]}
+{"sdg_context":"SDG-09","topic_id":"topic_10","terms":["virtual","system","robot","human","robotic","reality","robots","control","environment"]}
+{"sdg_context":"SDG-09","topic_id":"topic_11","terms":["process","manufacturing","quality","additive","machining","material","parts","machine","parameters"]}
+{"sdg_context":"SDG-09","topic_id":"topic_12","terms":["agriculture","agricultural","farming","maritime","twins","fruit","product","forest","marine"]}
+{"sdg_context":"SDG-09","topic_id":"topic_13","terms":["construction","building","information","management","model","safety","buildings","maintenance","project"]}
+
+## OUTPUT ONLY VALID JSON ARRAY. START WITH [ AND END WITH ]. NO MARKDOWN, NO TEXT BEFORE OR AFTER.
