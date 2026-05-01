@@ -12,7 +12,9 @@ ollama run laguna-xs.2 "$(cat prompt_sdg09.txt)" > laguna-xs.2_sdg09.json
 
 jq -s 'add' mistral_sdg09.json mistral_sdg11.json mistral_sdg12.json mistral_sdg03.json > mistral_local.json
 
-
-openrouter ile nemotron 3 nano omni, Hy3 preview, ...
+subSDGprompt.txt prompt olarak belirlendikten sonra, 
+openrouter ile nemotron 3 nano omni, Hy3 preview, OwlAlpha ve Gpt-oss-120b ve ling-2.6-1T modelleri koşturuldu.
+web üzerinden deepseek-v4, kimi2.6, qwen3.6-plus modelleri koşturuldu.
+yerelde ise llama3, mistral, phi4 ve laguna-xs.2 (ollama version is 0.22.1 güncellemeden çalışmam dedi) modelleri koşturuldu.
 
 Analizlerin sonucu sub-SDG'ler netleştirildi.
