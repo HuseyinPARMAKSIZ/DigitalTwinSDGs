@@ -7,6 +7,8 @@ ollama ile mistral ve llama3   -  ollama run llama3 "$(cat subSDGprompt.txt)" ->
 ollama run mistral "$(cat prompt_sdg03.txt)" > mistral_sdg03.json
 echo "SDG-03 tamamlandı. Sonuçlar: mistral_sdg03.json"
 
+ollama run laguna-xs.2 "$(cat prompt_sdg09.txt)" > laguna-xs.2_sdg09.json
+
 
 jq -s 'add' mistral_sdg09.json mistral_sdg11.json mistral_sdg12.json mistral_sdg03.json > mistral_local.json
 
